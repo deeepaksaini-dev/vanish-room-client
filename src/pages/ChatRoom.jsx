@@ -299,6 +299,15 @@ export default function ChatRoom() {
 
         {/* Sidebar */}
         <div className={`sidebar ${sidebarOpen ? '' : 'collapsed'}`}>
+          <div style={{ padding: '0.75rem', borderBottom: '1px solid var(--border)' }}>
+            <button 
+              className="btn btn-secondary" 
+              style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '0.6rem' }} 
+              onClick={() => setSidebarOpen(false)}
+            >
+              <IconArrowLeft size={16} /> Back to Chat
+            </button>
+          </div>
           <div className="sidebar-tabs">
             <button className={`sidebar-tab ${sidebarTab === 'members' ? 'active' : ''}`} onClick={() => setSidebarTab('members')}>
               <IconUsers size={14} /> Members ({members.length})
